@@ -20,6 +20,7 @@
     <module>L12-OOP</module>
     <module>L13-Objects</module>
     <module>L14-Static-Classes</module>
+    <module>L16-Lists</module>
   </modules>
 
   <properties>
