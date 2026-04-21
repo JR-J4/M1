@@ -21,6 +21,8 @@
     <module>L13-Objects</module>
     <module>L14-Static-Classes</module>
     <module>L16-Lists</module>
+    <module>L17-Set-Collections</module>
+    <module>L18-Map</module>
   </modules>
 
   <properties>

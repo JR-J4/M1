@@ -1,6 +1,7 @@
 package ua.com.javarush.jsquad.m1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Лекція 16: Списки — Параметризовані типи (Generics)
@@ -13,9 +14,10 @@ import java.util.ArrayList;
  *   - У класів може бути декілька типів-параметрів:
  *     ОсновнийТип<Тип1, Тип2, Тип3>
  *   - Складні типи можна використовувати як параметри:
- *     ОсновнийТип<ТипПараметр<ТипПараметрПараметра>>
+ *     ОсновнийТип < ТипПараметр < ТипПараметрПараметра > >
  *   - Масив з параметризованих типів:
  *     ОсновнийТип<Тип>[] array = new ОсновнийТип<Тип>[довжина];
+ *
  *
  * Стирання типів (Type Erasure): після компіляції інформація про типи-параметри
  * видаляється. ArrayList<String> стає просто ArrayList з приведенням типів.
@@ -43,7 +45,7 @@ public class Example07_Generics {
         rawList.add(true);
         System.out.println("Raw list: " + rawList);
         // При зчитуванні не знаємо, що там — можливий ClassCastException
-        // String s = (String) rawList.get(1); // ClassCastException!
+//         String s = (String) rawList.get(1); // ClassCastException!
 
         // З дженериком — безпечно
         ArrayList<String> safeList = new ArrayList<>();

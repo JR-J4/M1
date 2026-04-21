@@ -4,6 +4,7 @@ import java.util.ConcurrentModificationException;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.stream.Stream;
 
 /**
  * Лекція 17: Колекції Set — Видалення елемента в циклі for-each
