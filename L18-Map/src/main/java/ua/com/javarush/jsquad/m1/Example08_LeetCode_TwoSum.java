@@ -11,7 +11,10 @@ import java.util.HashMap;
  * Кожен вхід має рівно одне рішення. Не можна використати один елемент двічі.
  *
  * Приклад:
- *   nums = [2, 7, 11, 15], target = 9  →  [0, 1]  (бо 2 + 7 = 9)
+ *   nums = [2, 7, 11, 15],
+ *   target = 9  →  [0, 1]  (бо 2 + 7 = 9)
+ *
+ *   9 - 2 = 7
  *
  * Ключова ідея з HashMap:
  *   Для кожного елемента рахуємо «доповнення» (complement = target - nums[i]).
@@ -93,15 +96,21 @@ public class Example08_LeetCode_TwoSum {
 
     /**
      * Брутфорс: перебираємо всі пари — O(n²)
+     *
+     * nums = [2, 7, 11, 15],
      */
     static int[] twoSumBruteForce(int[] nums, int target) {
+
         for (int i = 0; i < nums.length; i++) {
+
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
                     return new int[]{i, j};
                 }
             }
+
         }
+
         return new int[]{-1, -1};
     }
 
@@ -109,11 +118,16 @@ public class Example08_LeetCode_TwoSum {
      * HashMap рішення: один прохід — O(n)
      * Зберігаємо значення → індекс. Для кожного елемента перевіряємо,
      * чи є доповнення (target - nums[i]) вже у мапі.
+     *
+     * int[] nums2 = {3, 2, 4};
+     * target = 6
      */
     static int[] twoSumHashMap(int[] nums, int target) {
+
         HashMap<Integer, Integer> seen = new HashMap<>(); // значення → індекс
 
         for (int i = 0; i < nums.length; i++) {
+
             int complement = target - nums[i];
 
             if (seen.containsKey(complement)) {

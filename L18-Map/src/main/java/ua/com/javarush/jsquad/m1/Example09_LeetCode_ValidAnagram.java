@@ -1,5 +1,6 @@
 package ua.com.javarush.jsquad.m1;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -69,7 +70,17 @@ public class Example09_LeetCode_ValidAnagram {
     }
 
     /**
-     * Рішення з HashMap: підрахунок частот — O(n)
+     * Рішення з HashMap: підрахунок частот — O(n2)
+     *
+     * [a, b, a, c, c]
+     *
+     * for -> Collections.fre(arr, a)
+     *
+     * --> for {
+     *      for {
+     *
+     *   }
+     * }
      *
      * Алгоритм:
      * 1. Якщо довжини різні — одразу false
@@ -87,7 +98,9 @@ public class Example09_LeetCode_ValidAnagram {
         // Рахуємо частоту символів у першому рядку
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+            Integer currentFreq = charCount.getOrDefault(c, 0);
+
+            charCount.put(c, currentFreq + 1);
         }
 
         // Зменшуємо лічильники для символів другого рядка

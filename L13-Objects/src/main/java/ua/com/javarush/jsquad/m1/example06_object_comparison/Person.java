@@ -8,7 +8,7 @@ import java.util.Objects;
  * Перевизначає equals() та hashCode() для порівняння за значенням полів,
  * а не за адресою в пам'яті.
  */
-public class Person {
+public class Person implements Comparable<Person> {
 
     int id;
     private String name;
@@ -43,5 +43,10 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, age, test);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return 0;
     }
 }
