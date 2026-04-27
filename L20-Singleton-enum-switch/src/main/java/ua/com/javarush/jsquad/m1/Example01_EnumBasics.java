@@ -27,15 +27,6 @@ package ua.com.javarush.jsquad.m1;
 public class Example01_EnumBasics {
 
     // Оголошення enum — тип "День тижня" з 7 можливими значеннями
-    enum Day {
-        MONDAY,
-        TUESDAY,
-        WEDNESDAY,
-        THURSDAY,
-        FRIDAY,
-        SATURDAY,
-        SUNDAY
-    }
 
     // Ще один enum — місяці року
     enum Month {
@@ -61,7 +52,7 @@ public class Example01_EnumBasics {
         System.out.println("=== Блок 1: Оголошення та присвоєння ===");
 
         // Створюємо змінну типу Day і присвоюємо значення
-        Day today = Day.WEDNESDAY;
+        Day today = Day.MONDAY;
         System.out.println("Сьогодні: " + today);  // WEDNESDAY
 
         // Можна присвоїти будь-яке значення з enum
