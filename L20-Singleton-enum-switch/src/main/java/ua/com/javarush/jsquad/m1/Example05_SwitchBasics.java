@@ -59,6 +59,9 @@ public class Example05_SwitchBasics {
             case 7:
                 System.out.println("Неділя");
                 break;
+            default:
+                System.out.println("Не знайдено");
+                break;
         }
 
         System.out.println("З break — виконався тільки case 3");
