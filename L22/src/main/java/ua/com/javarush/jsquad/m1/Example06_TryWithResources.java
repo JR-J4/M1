@@ -38,7 +38,7 @@ public class Example06_TryWithResources {
         System.out.println("=== Блок 1: Один ресурс ===");
 
         // Сценарій: відкриваємо зʼєднання з базою, виконуємо запит
-        try (DatabaseConnection db = new DatabaseConnection("users_db")) {
+        try ( DatabaseConnection db = new DatabaseConnection("users_db") ) {
             db.query("SELECT * FROM users");
             db.query("SELECT * FROM orders");
         } // close() викличеться автоматично!
@@ -52,8 +52,8 @@ public class Example06_TryWithResources {
         System.out.println("=== Блок 2: Декілька ресурсів ===");
 
         // Сценарій: копіювання даних з одного джерела в інше
-        try (DataReader reader = new DataReader("input.csv");
-             DataWriter writer = new DataWriter("output.csv")) {
+        try ( DataReader reader = new DataReader("input.csv");
+             DataWriter writer = new DataWriter("output.csv") ) {
 
             String data = reader.readAll();
             writer.write(data);

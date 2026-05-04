@@ -89,6 +89,7 @@ public class Example05_ExternalResources {
             } catch (Exception e) {
                 System.out.println("Помилка при закритті source: " + e.getMessage());
             }
+
             try {
                 target.close();
             } catch (Exception e) {
