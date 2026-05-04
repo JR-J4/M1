@@ -25,6 +25,8 @@
     <module>L18-Map</module>
     <module>L19-LinkedList-Queue-SortedMap</module>
     <module>L20-Singleton-enum-switch</module>
+    <module>L21-Exceptions</module>
+    <module>L22</module>
   </modules>
 
   <properties>
