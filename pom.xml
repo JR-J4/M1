@@ -27,6 +27,7 @@
     <module>L20-Singleton-enum-switch</module>
     <module>L21-Exceptions</module>
     <module>L22</module>
+    <module>L24-IO</module>
   </modules>
 
   <properties>
