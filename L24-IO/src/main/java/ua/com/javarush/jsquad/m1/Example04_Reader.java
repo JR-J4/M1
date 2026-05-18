@@ -78,7 +78,7 @@ public class Example04_Reader {
         Path tempFile = Files.createTempFile("jsquad-l23-reader-", ".txt");
         Files.writeString(tempFile, "Привiт, JavaRush!\nЦе текстовий файл з українською мовою.");
 
-        try (FileReader fileReader = new FileReader(tempFile.toFile())) {
+        try ( FileReader fileReader = new FileReader( tempFile.toFile() ) ) {
             char[] buf = new char[100];
             int total = fileReader.read(buf);
             System.out.println("Прочитано " + total + " символiв з файлу:");

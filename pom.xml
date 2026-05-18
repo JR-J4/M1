@@ -28,6 +28,8 @@
     <module>L21-Exceptions</module>
     <module>L22</module>
     <module>L24-IO</module>
+    <module>L25-IO-P2-Project</module>
+    <module>L26-NIO</module>
   </modules>
 
   <properties>

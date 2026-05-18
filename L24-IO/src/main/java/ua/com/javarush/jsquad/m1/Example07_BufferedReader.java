@@ -57,7 +57,7 @@ public class Example07_BufferedReader {
                 "[INFO] Спроба перепiдключення\n" +
                 "[INFO] З'єднання вiдновлено");
 
-        try (BufferedReader logReader = new BufferedReader(new FileReader(logFile.toFile()))) {
+        try ( BufferedReader logReader = new BufferedReader(new FileReader( logFile.toFile() ) ) )  {
             String entry;
             int errors = 0;
             while ((entry = logReader.readLine()) != null) {
