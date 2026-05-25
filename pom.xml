@@ -30,6 +30,7 @@
     <module>L24-IO</module>
     <module>L25-IO-P2-Project</module>
     <module>L26-NIO</module>
+    <module>L27-DateTime</module>
   </modules>
 
   <properties>
