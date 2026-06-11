@@ -31,6 +31,8 @@
     <module>L25-IO-P2-Project</module>
     <module>L26-NIO</module>
     <module>L27-DateTime</module>
+    <module>L28-Git</module>
+    <module>M2</module>
   </modules>
 
   <properties>
