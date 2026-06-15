@@ -18,10 +18,12 @@ public class EmailNotification extends NotificationBase implements Iterable<Emai
     @Override
     public void send() {
         System.out.println("  📧 Лист на " + email + ": " + message);
+        super.send();
     }
 
     @Override
     public Iterator<EmailNotification> iterator() {
         return null;
     }
+
 }

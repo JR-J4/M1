@@ -33,9 +33,22 @@ public class Example07_PolymorphismOverriding {
 
         // === 1. Той самий виклик send() — різна поведінка ===
         System.out.println("=== Один метод send() — різні реалізації ===");
-        Notification email = new EmailNotification("Ваше замовлення відправлено", "user@mail.com");
+
+        EmailNotification email = new EmailNotification("Ваше замовлення відправлено", "user@mail.com");
+        NotificationBase baseNotification = email;
+        Notification notification = new PushNotification("У вас нове повідомлення");
+
+
+
+        EmailNotification newEn = (EmailNotification) notification;
+
+
+
         Notification sms = new SmsNotification("Код: 4815", "+380501234567");
         Notification push = new PushNotification("У вас нове повідомлення");
+
+
+
 
         email.send();  // викликається версія EmailNotification
         sms.send();    // викликається версія SmsNotification

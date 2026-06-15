@@ -29,7 +29,6 @@ public class Example03_EncapsulationHiding {
 
         // === 1. Користувач натискає ОДНУ кнопку ===
         System.out.println("=== Простий публічний інтерфейс ===");
-        machine.makeCappuccino();
         System.out.println();
 
         // === 2. Усе складне приховано ===

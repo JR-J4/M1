@@ -19,13 +19,17 @@ package ua.com.javarush.jsquad.m1.example03_encapsulation_hiding;
  */
 public class CoffeeMachine {
 
+    private int waterTemp;
+
+
     // --- Приховані "нутрощі": користувач їх не бачить і не викликає ---
     private void grindBeans() {
         System.out.println("    [крок 1] мелемо зерна... ⚙");
     }
 
-    private void heatWater() {
+    private void heatWater(int temp) {
         System.out.println("    [крок 2] нагріваємо воду до 92°C... 🔥");
+        waterTemp = temp;
     }
 
     private void frothMilk() {
@@ -33,10 +37,18 @@ public class CoffeeMachine {
     }
 
     // --- Публічний інтерфейс: одна проста кнопка для користувача ---
-    public void makeCappuccino() {
+    public void makeCappuccino(boolean extraMilk) {
         System.out.println("  ▶ Натиснуто кнопку \"Капучино\"");
         grindBeans(); // ці виклики сховані від зовнішнього світу
-        heatWater();
+        heatWater(92);
+        frothMilk();
+        System.out.println("  ✔ Капучино готове! ☕");
+    }
+
+    public void makeFas() {
+        System.out.println("  ▶ Натиснуто кнопку \"Капучино\"");
+        grindBeans(); // ці виклики сховані від зовнішнього світу
+        heatWater(98);
         frothMilk();
         System.out.println("  ✔ Капучино готове! ☕");
     }

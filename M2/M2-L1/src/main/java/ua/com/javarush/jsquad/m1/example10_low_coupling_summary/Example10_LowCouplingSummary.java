@@ -44,14 +44,13 @@ public class Example10_LowCouplingSummary {
 
         // === 2. Слабка зв'язність: новий спосіб оплати без змін у магазині ===
         System.out.println("=== Додали CryptoPayment — магазин не змінювали! ===");
-        store.checkout("Відеокурс", 2000, new CryptoPayment("bc1q...x7"));
+        store.checkout("Відеокурс", 2000, new NewPaymentMethod());
 
         // === 3. Список замовлень — повний поліморфізм ===
         System.out.println("=== Обробка кошика різними способами ===");
         PaymentMethod[] methods = {
                 new CardPayment("0000111122223333"),
-                new PayPalPayment("user@pay.com"),
-                new CryptoPayment("0xABCD...")
+                new PayPalPayment("user@pay.com")
         };
         double[] prices = { 99, 149, 199 };
         for (int i = 0; i < methods.length; i++) {

@@ -18,4 +18,22 @@ public class OnlineStore {
         boolean ok = payment.pay(price);
         System.out.println(ok ? "  ✔ Оплачено. Дякуємо за покупку!\n" : "  ✖ Оплата не пройшла.\n");
     }
+
+    // checkout приймає БУДЬ-ЯКИЙ спосіб оплати, що реалізує інтерфейс.
+    // Поліморфізм: який саме pay() виконається — вирішує переданий об'єкт.
+    public void checkout(String product, double price, PayPalPayment payment) {
+        System.out.println("Замовлення: \"" + product + "\" (" + price + ")");
+        System.out.println("Спосіб оплати: " + payment.name());
+        boolean ok = payment.pay(price);
+        System.out.println(ok ? "  ✔ Оплачено. Дякуємо за покупку!\n" : "  ✖ Оплата не пройшла.\n");
+    }
+
+    // checkout приймає БУДЬ-ЯКИЙ спосіб оплати, що реалізує інтерфейс.
+    // Поліморфізм: який саме pay() виконається — вирішує переданий об'єкт.
+    public void checkout(String product, double price, CardPayment payment) {
+        System.out.println("Замовлення: \"" + product + "\" (" + price + ")");
+        System.out.println("Спосіб оплати: " + payment.name());
+        boolean ok = payment.pay(price);
+        System.out.println(ok ? "  ✔ Оплачено. Дякуємо за покупку!\n" : "  ✖ Оплата не пройшла.\n");
+    }
 }

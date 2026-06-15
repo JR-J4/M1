@@ -17,4 +17,8 @@ public abstract class NotificationBase implements Notification, Serializable {
         this.message = message;
     }
 
+    @Override
+    public void send() {
+        System.out.println("Base send method");
+    }
 }
