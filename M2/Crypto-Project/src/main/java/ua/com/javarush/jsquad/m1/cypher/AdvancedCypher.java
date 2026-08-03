@@ -7,6 +7,12 @@ public class AdvancedCypher extends CypherBase {
     super(id, name, complexity);
   }
 
+  @Override
+  public Integer test() {
+
+    return 0;
+  }
+
   public static AdvancedCypher getInstance(){
     if (INSTANCE == null) {
       INSTANCE = new AdvancedCypher(1, "SuperCypher123", 10);

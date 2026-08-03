@@ -7,6 +7,12 @@ public class AbcCypher extends CypherBase {
   }
 
   @Override
+  public Integer test() {
+    return 0;
+  }
+
+
+  @Override
   public String encrypt(String payload) {
     return "";
   }

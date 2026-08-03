@@ -8,6 +8,16 @@ public class BasicCypher extends CypherBase {
     super(id, name, complexity);
   }
 
+
+
+  @Override
+  protected Integer test() {
+
+    return 0;
+  }
+
+
+
   public static BasicCypher getInstance(){
     if (INSTANCE == null) {
       INSTANCE = new BasicCypher(1, "BasicCypher123", 10);

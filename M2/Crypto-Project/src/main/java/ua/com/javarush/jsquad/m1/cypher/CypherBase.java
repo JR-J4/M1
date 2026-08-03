@@ -25,4 +25,6 @@ public abstract class CypherBase implements Cypher {
   public int getComplexity() {
     return complexity;
   }
+
+  protected abstract Number test();
 }
